@@ -1,0 +1,101 @@
+h1 {
+	color : red;
+	background-color : blue;
+	padding :15px;
+}
+
+p#li{
+	padding : 15px;
+	border : 1px dashed;
+	margin : 20px;
+	background : url('https://i.stack.imgur.com/IehB7.png');
+	font : "Times new Roman";
+}
+
+#parent-div {
+	background : rgba(0,0,255,0.4);
+	border : 1px solid;
+}
+#default {
+	background : red;
+}
+
+#centered {
+	background : rgba(0,255,0,0.3);
+	width : 50%;
+	margin : auto;
+}
+
+#centered-text {
+	text-align : center;
+}
+
+#top-div {
+	background-color : rgba(255,0,0,1);
+	position :absolute;
+	width : 200px;
+	height : 200px;
+	z-index : 4;
+	
+}
+
+#bot-right {
+	position : absolute;
+	bottom : 0px;
+	right : 0px;
+}
+
+#float-tr {
+	position : absolute;
+	top : 0px;
+	right : 0px;
+	background-color : red;
+}
+
+#srh {
+	background : blue;
+	position : fixed;
+	width : 100%;
+	z-index : 5;
+	margin : 0px;
+	top : 0px;
+	left : 0px;
+}
+
+#topanga a {
+	padding-left: 35px;
+}
+
+#mainContent {
+	width:69%;
+	/* float : left; */
+	border : 1px solid;
+}
+#mainContent p {
+	padding : 5px;
+}
+
+#sidebar {
+	width : 30%;
+	/* float :right; */
+	border : 1px solid;
+}
+#sidebar p {
+	padding : 25px;
+}
+
+#pagefooter {
+	display : block;
+	width :100%;
+	border: 1px solid;
+}
+
+#body {
+	border : 2px solid;
+}
+
+div[class=wide] {
+	width :100%;
+	border : 2px solid;
+	float : bottom;
+}

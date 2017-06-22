@@ -1,0 +1,30 @@
+#editor-main {
+    position: absolute;
+    border: 1px solid;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    height: 100%;
+    width: 40%;
+    outline: 0px;
+    font-family: 'Courier New';
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+    background-color: rgba(178, 0, 255,0.1);
+    font-family : 'Courier New';
+}
+
+#editor-main:enabled {
+    background-color :red;
+}
+
+#suggest {
+    position : absolute;
+    z-index : 1;
+    margin-top : 10px;
+    margin-left : 30px;
+    display : none;
+}
+
+
