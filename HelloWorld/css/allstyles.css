@@ -64,6 +64,15 @@ p#li{
 
 #topanga a {
 	padding-left: 35px;
+	background-color: black;
+}
+#mainContent div {
+    background-color: black;
+    height: 40px;
+}
+
+#topanga a:hover {
+	color: lightsteelblue;
 }
 
 #mainContent {

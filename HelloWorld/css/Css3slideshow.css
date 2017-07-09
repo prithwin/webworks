@@ -1,0 +1,91 @@
+body {
+    height : 680px;
+    background-color: black;
+}
+#page_content {
+    height : 100%;
+}
+
+#view {
+    height : 75%;
+    background-color: black;
+}
+
+#slidesContainer {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+#slides {
+    height : 25%;
+    overflow: scroll;
+    padding-top :15px;
+    white-space: nowrap;
+    background-color: black;
+}
+
+.img_preview {
+    height : 150px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.img_real:hover {
+    /*-moz-transform: scale(1.2) translate(0px,50px);*/
+    -webkit-transform: scale(1.2) translate(0px,50px);
+    z-index: 4;
+    -webkit-transition: 2s ease-in-out;
+
+}
+
+.img_preview:hover {
+    -webkit-animation-name: dibldobl;
+    -webkit-animation-duration: 5s ;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transition: 2s ease-in-out;
+}
+
+@-webkit-keyframes dibldobl {
+    0% {-webkit-transform: rotate(-10deg);}
+    25% {-webkit-transform: rotate(10deg);}
+    50% {-webkit-transform: rotate(-10deg);}
+    75% {-webkit-transform: rotate(10deg);}
+    100% {-webkit-transform: rotate(-10deg);}
+}
+
+
+/*.img_preview:hover {*/
+    /*-moz-transform: rotate(10deg);*/
+    /*-webkit-transform: rotate(10deg);*/
+/*}*/
+
+
+.img_real {
+    height: 495px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    margin-left: 38%;
+    visibility: hidden;
+    border-radius: 5px;
+    display: none;
+}
+
+.img_preview {
+    border-radius: 5px;
+}
+
+#darkbg {
+    background-color: rgba(0,0,0, 0.8);
+    position :absolute;
+    display : none;
+    height:100%;
+    width : 100%;
+    left: 0;
+    right: 0;
+    /*z-index: 3;*/
+}
