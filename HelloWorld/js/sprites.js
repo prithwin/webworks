@@ -3,8 +3,10 @@ var c;
 var gameRunning = false;
 var walkingImage;
 var bwalkingImage;
+var duckKingImage;
 var standingImage;
 var ryuji;
+var duckKing;
 var fps = 12;
 var mapTileSet;
 var mapDesc;
@@ -82,6 +84,23 @@ function Map() {
   }
 }
 
+function DuckKing(x,y) {   // 85 x 133
+  this.currentFrame = 0;
+    this.x = 800;
+    //   this.y = 0;
+    this.y = 3200 - 25- 127;
+
+  this.draw = function() {
+    c.drawImage(duckKingImage,0, (this.currentFrame * 133), 85 , 133 , this.x , this.y , 85, 133);
+  }
+
+
+  this.update = function() {
+    this.currentFrame += 1;
+    this.currentFrame %= 11;
+  }
+}
+
 function Ryuji(standing) {
   this.currentFrame = 0;
   this.standing = standing;
@@ -143,6 +162,12 @@ function init() {
   let standing = true;
   this.ryuji = new Ryuji(standing);
 
+  duckKingImage = new Image();
+  duckKingImage.onload = function() { console.log('ducking king image loaded');}
+  duckKingImage.src = './images/duck-king-atlas.png';
+  this.duckKing = new DuckKing();
+
+
   //Load the map itself.
   mapTileSet = $.getJSON('./images/tileset.json',function() {
     mapAtlas = new Image();
@@ -178,6 +203,8 @@ function animate() {
   map.draw();
   ryuji.update();
   ryuji.draw();
+  duckKing.draw();
+  duckKing.update();
   let now = Date.now();
   then = now + (1000 / fps);
   while (Date.now() < then) {
